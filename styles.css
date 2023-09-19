@@ -143,94 +143,153 @@ table {
   align-items: center;
 }
 
-@media screen and (max-width: 400px) {
+.wrapper {
+  width: 375px;
+  height: 667px;
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: calc(100% - 32px);
+  height: calc(100% - 56px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.product-image {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card-bottom {
+  background-color: var(--white);
+  height: 100%;
+  max-width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 25px;
+  padding-right: 23px;
+}
+
+.category {
+  padding-top: 26px;
+  font-weight: 500;
+  letter-spacing: 0.41em;
+  font-size: 12px;
+  color: var(--dark-grayish-blue);
+}
+
+.product-title {
+  font-family: "Fraunces";
+  font-size: 32px;
+  color: var(--very-dark-blue);
+  margin-top: 1rem;
+}
+
+.product-description {
+  margin-top: 1.15rem;
+  color: var(--dark-grayish-blue);
+  line-height: 1.65em;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  margin-top: 1.68rem;
+  gap: 1.4rem;
+
+  .main-price {
+    font-size: 32px;
+    font-family: "Fraunces";
+    color: var(--dark-cyan);
+  }
+
+  .old-price {
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    font-size: 13px;
+    margin-bottom: 1px;
+  }
+}
+
+.add-to-cart {
+  font-family: "Montserrat";
+  background-color: var(--dark-cyan);
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  color: white;
+  padding: 1.08rem 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  justify-content: center;
+  font-size: 14px;
+  margin-top: 1.35rem;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+.add-to-cart:hover {
+  background-color: var(--very-dark-blue);
+}
+
+.product-image-lg {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
   .wrapper {
-    width: 375px;
-    height: 667px;
-    background-color: var(--cream);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 1440px;
+    height: 800px;
+  }
+
+  .product-image {
+    display: none;
   }
 
   .card {
-    width: calc(100% - 32px);
-    height: calc(100% - 56px);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    height: 450px;
+    width: 600px;
   }
-  .product-image {
-    width: 100%;
-    border-top-right-radius: 10px;
+  .product-image-lg {
+    display: block;
+    width: 50%;
+    border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
   }
 
   .card-bottom {
-    background-color: var(--white);
-    height: 100%;
-    max-width: 100%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .category {
-    padding-top: 26px;
-    font-weight: 500;
-    letter-spacing: 0.41em;
-    font-size: 12px;
-    color: var(--dark-grayish-blue);
+    width: 50%;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;;
+    margin-top: 0;
+    max-height: 450px;
+    padding-top: 0.6rem;
+    padding-left: 31.5px;
+    padding-right: 32px;
   }
 
   .product-title {
-    font-family: "Fraunces";
-    font-size: 32px;
-    color: var(--very-dark-blue);
-    margin-top: 1rem;
+    margin-top: 1.55rem;
   }
 
   .product-description {
-    margin-top: 1.15rem;
-    color: var(--dark-grayish-blue);
-    line-height: 1.65em;
+    margin-top: 1.75rem;
   }
 
   .prices {
-    display: flex;
-    align-items: center;
-    margin-top: 1.68rem;
-    gap: 1.4rem;
-
-    .main-price {
-      font-size: 32px;
-      font-family: "Fraunces";
-      color: var(--dark-cyan);
-    }
-
-    .old-price {
-      text-decoration: line-through;
-      color: var(--dark-grayish-blue);
-      font-size: 13px;
-      margin-bottom: 1px;
-    }
+    margin-top: 2.05rem;
+    /* padding-left: 1px; */
   }
 
   .add-to-cart {
-    background-color: var(--dark-cyan);
-    outline: none;
-    border: none;
-    width: 100%;
-    border-radius: 7px;
-    color: white;
-    padding: 1.12rem 0;
-    font-weight: 600;
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    font-size: 14px;
-    margin-top: 1.4rem;
-    letter-spacing: 0.04em;
+    margin-top: 2.05rem;
   }
 }
